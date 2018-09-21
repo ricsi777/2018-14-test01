@@ -42,24 +42,22 @@ namespace ConsoleApp2
 
             static void Main(string[] args)
         {
-            int[] szamok = new int[10];
 
-            Console.WriteLine("Kérem adjon meg 10 db számot!");
-
-            for (int i = 0; i < 10; i++)
-            {
-                string keres;
+            string keres = "";
+            int elemszam;
                 do
                 {
-                    Console.WriteLine("Az {0} szám!",i+1);
+                    Console.WriteLine("Kérem adja meg, hogy hány elemű legyen a tömb!");
                     keres = Console.ReadLine();
-
-                } while (int.TryParse(keres, out szamok[i])==false);
-            }
-
+                } while (int.TryParse(keres, out elemszam)==false);
+            int[] szamok = new int[elemszam];
             for (int i = 0; i < szamok.Length; i++)
             {
-                Console.WriteLine(szamok[i]);
+                do
+                {
+                    Console.WriteLine("Kérem az {0} számot!", i + 1);
+                    keres = Console.ReadLine();
+                } while (int.TryParse(keres, out szamok[i]) == false);
             }
             int helye;
             int legnagyobb = Max(szamok, out helye);
