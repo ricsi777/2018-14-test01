@@ -57,6 +57,12 @@ namespace ConsoleApp2
                 {
                     Console.WriteLine("Kérem az {0} számot!", i + 1);
                     keres = Console.ReadLine();
+                    if(int.TryParse(keres, out szamok[i]) == false)
+                    {
+                        Console.WriteLine("Mivel nem számot írt be, hiba miatt kilép a program!");
+                        Console.ReadKey();
+                        return;
+                    }
                 } while (int.TryParse(keres, out szamok[i]) == false);
             }
             int helye;
