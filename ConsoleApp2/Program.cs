@@ -11,6 +11,8 @@ namespace ConsoleApp2
         static void Main(string[] args)
         {
             Console.WriteLine("Szia Tunci");
+            string szoveg = "Tuncika";
+            Console.WriteLine(szoveg);
         }
     }
 }
